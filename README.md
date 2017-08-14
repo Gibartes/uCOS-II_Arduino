@@ -24,6 +24,7 @@
 MicroC/OS for Arduino boards based on ARM Cortex M3 like Arudino Due.
 This source code should be used just for education or research according to uC/OS-II's licensing terms.
 
+Development stream storage : https://github.com/Gibartes/uCOS-II-Arduino.git
 
 * OS_TASK_TMR_PRIO is defined as priority 15 in cfg/oscfg.h
 
@@ -37,3 +38,4 @@ Revised by HongKyun, Gibartes
   Just include ucos_ii.h
   
   \#include <ucos_ii.h>
+
