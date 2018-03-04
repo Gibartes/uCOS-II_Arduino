@@ -40,11 +40,13 @@ Revised by HongKyun, Gibartes
   Just include ucos_ii.h
   
     #include <ucos_ii.h>
+    #define TASK_PRIO (INT8U)N // declare task priority N : 0~255 ( except timer priority which defined in oscfg.h )
+    OS_STK    TASK_STK[N];     // declare task stack with static size
     void setup(){
-     OSInit();
-     // Create some tasks using OSTaskCreate(void (*task)(void *p_arg), void *p_arg, OS_STK *ptos, INT8U prio)
-     OSTaskCreate(Task_Name,Task_Argument,Task_Stack_Pointer,Task_Priority);
-     OSStart();
+       OSInit();
+       // Create some tasks using OSTaskCreate(void (*task)(void *p_arg), void *p_arg, OS_STK *ptos, INT8U prio)
+       OSTaskCreate(Task_Name,Task_Argument,Task_Stack_Pointer,Task_Priority);
+       OSStart();
      }
     void loop(){/* do nothing */}
 
