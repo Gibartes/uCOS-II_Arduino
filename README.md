@@ -43,9 +43,13 @@ Revised by HongKyun, Gibartes
  
   void setup(){
      ......
+     
      OSInit();
+     
      Create some tasks using OSTaskCreate(void (*task)(void *p_arg), void *p_arg, OS_STK *ptos, INT8U prio)
+     
      OSTaskCreate(Task_Name,Task_Argument,Task_Stack_Pointer,Task_Priority);
      .....
+    
      OSStart();
   }
