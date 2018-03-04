@@ -1,4 +1,4 @@
-# MicroC/OS-II-Arduino
+  # MicroC/OS-II-Arduino
 
 *********************************************************************************************************
 #                                                uC/OS-II
@@ -38,3 +38,11 @@ Revised by HongKyun, Gibartes
   Just include ucos_ii.h
   
   \#include <ucos_ii.h>
+  void setup(){
+    ......
+    OSInit();
+    // Create some tasks using OSTaskCreate(void (*task)(void *p_arg), void *p_arg, OS_STK *ptos, INT8U prio)
+    OSTaskCreate(Task_Name,Task_Argument,Task_Stack_Pointer,Task_Priority);
+    .....
+    OSStart();
+   }
